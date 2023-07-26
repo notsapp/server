@@ -3,7 +3,7 @@ const { connect } = require("mongoose");
 const { Message } = require("./schemas");
 
 async function connectDB() {
-  const DB_URI = (process.env.ENV = "DEV"
+  const DB_URI = (process.env.ENV === "DEV"
     ? process.env.DB_DEV_URI
     : process.env.DB_PROD_URI);
   try {
